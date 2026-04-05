@@ -1,0 +1,1 @@
+draw_white_fx(draw_stretched_fx);

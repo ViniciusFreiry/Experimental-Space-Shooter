@@ -28,7 +28,7 @@
   ],
   "name":"spr_tiro_inimigo1_contorno",
   "nineSlice":null,
-  "origin":9,
+  "origin":7,
   "parent":{
     "name":"Inimigo1",
     "path":"folders/Sprites/Inimigos/Inimigo1.yy",
@@ -96,7 +96,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":5,
-    "yorigin":26,
+    "yorigin":27,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

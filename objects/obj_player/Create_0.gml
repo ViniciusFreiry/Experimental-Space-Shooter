@@ -1,3 +1,6 @@
+audio_stop_all();
+audio_play_sound(music, 10, false);
+
 #region Variables
 spd = 2;
 shoots_per_sec = 7.5;
@@ -10,6 +13,9 @@ my_shield = noone;
 
 shoot_cd = game_get_speed(gamespeed_fps) / shoots_per_sec;
 invencible_cd = game_get_speed(gamespeed_fps);
+
+start_white_fx();
+start_stretched_fx();
 #endregion
 
 #region Functions
@@ -34,6 +40,9 @@ player_controll = function() {
 	if (shoot_timer > 0) shoot_timer--;
 	
 	if (_shoot and shoot_timer <= 0) {
+		set_stretched_fx(0.8, 1.2);
+		sound_fx(sfx_laser1, 0.1);
+		
 		switch(shoot_level) {
 			case 1:
 				shoot_1();
@@ -57,17 +66,20 @@ player_controll = function() {
 	if (_shield) {
 		use_shield();
 	}
+	
+	return_stretched_fx(0.3);
+	return_white_fx();
 }
 
 shoot_1 = function() {
-	instance_create_layer(x, y, "Shoot", obj_shoot, { vspeed: -10 });
+	instance_create_layer(x, y, "Shoot", obj_shoot);
 }
 
 shoot_2 = function() {
 	var _shoot_spd = -10;
 	
-	instance_create_layer(x - sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot, { vspeed: -10 });
-	instance_create_layer(x + sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot, { vspeed: -10 });
+	instance_create_layer(x - sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot);
+	instance_create_layer(x + sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot);
 }
 
 shoot_3 = function() {
@@ -82,14 +94,24 @@ level_up_shoot = function() {
 lost_life = function() {
 	if (invencible_timer > 0 or my_shield != noone) return;
 	
+	set_stretched_fx(2, 0.5);
+	set_white_fx(3);
+	
 	if (lifes > 0) {
 		lifes--;
 		invencible_timer += invencible_cd;
-	} else instance_destroy();
+		screen_shake(10);
+	} else {
+		screen_shake(50);
+		sound_fx(sfx_explosion, 0.1);
+		destroy(obj_part_player);
+	}
 }
 
 use_shield = function() {
 	if (shields > 0 and my_shield == noone) {
+		sound_fx(sfx_shieldUp, 0, 0.5);
+		
 		shields--;
 	
 		my_shield = instance_create_layer(x, y, "Shield", obj_shield);
