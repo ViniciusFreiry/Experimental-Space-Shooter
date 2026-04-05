@@ -23,7 +23,7 @@ player_controll = function() {
 	_left = keyboard_check(ord("A")) or keyboard_check(vk_left),
 	_right = keyboard_check(ord("D")) or keyboard_check(vk_right),
 	_shoot = keyboard_check(vk_space) or mouse_check_button(mb_left),
-	_shield = keyboard_check_pressed(ord("E")) or mouse_check_button_pressed(mb_right),
+	_shield = keyboard_check(ord("E")) or mouse_check_button(mb_right),
 	_hspd = (_right - _left) * spd,
 	_vspd = (_down - _up) * spd;
 	
