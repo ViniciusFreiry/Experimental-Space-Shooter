@@ -74,10 +74,12 @@ state_machine = function() {
 }
 
 death = function() {
+	set_stretched_fx(1.5, 0.5);
+	set_white_fx(2);
+	if (!global.hitstop) hitstop_use(2);
+	
 	if (life > 1) {
 		life--;
-		set_stretched_fx(1.5, 0.5);
-		set_white_fx(2);
 	} else {
 		drop_power_up(7.5);
 		

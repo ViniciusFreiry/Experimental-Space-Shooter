@@ -101,6 +101,8 @@ lost_life = function() {
 		lifes--;
 		invencible_timer += invencible_cd;
 		screen_shake(10);
+		
+		hitstop_use(10);
 	} else {
 		screen_shake(50);
 		sound_fx(sfx_explosion, 0.1);

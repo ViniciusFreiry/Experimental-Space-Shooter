@@ -17,6 +17,6 @@ shoot = function() {
 
 death = function() {
 	drop_power_up(5);
-	
+	if (!global.hitstop) hitstop_use(2);
 	destroy(obj_part_enemy);
 }

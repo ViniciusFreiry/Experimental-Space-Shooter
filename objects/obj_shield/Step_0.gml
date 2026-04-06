@@ -1,3 +1,2 @@
 if (global.hitstop) exit;
-
-player_controll();
+consume_shield();
