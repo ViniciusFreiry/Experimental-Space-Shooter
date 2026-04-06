@@ -1,1 +1,1 @@
-draw_menu();
+if (!global.transition) draw_menu();

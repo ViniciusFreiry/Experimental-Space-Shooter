@@ -104,6 +104,8 @@ lost_life = function() {
 	} else {
 		screen_shake(50);
 		sound_fx(sfx_explosion, 0.1);
+		layer_sequence_create("Transitions", x - room_width / 2, y - room_height / 2, sq_transition_3);
+		global.transition = true;
 		destroy(obj_part_player);
 	}
 }
@@ -118,11 +120,19 @@ use_shield = function() {
 	}
 }
 
+earn_shield = function(_shield = 1) {
+	shields += _shield;
+}
+
 shield_controll = function() {
 	if (instance_exists(my_shield)) {
 		my_shield.x = x;
 		my_shield.y = y;
 	} else my_shield = noone;
+}
+
+earn_spd = function(_spd = 1) {
+	spd += _spd;
 }
 
 draw_icon_gui = function(_spr = spr_gui_vida, _var = lifes, _x_gap = 25, _y_gap = 25) {
@@ -133,3 +143,6 @@ draw_icon_gui = function(_spr = spr_gui_vida, _var = lifes, _x_gap = 25, _y_gap 
 	}
 }
 #endregion
+
+layer_sequence_create("Transitions", x - room_width / 2, y - room_height / 2, sq_transition_4);
+global.room_destiny = rm_start;

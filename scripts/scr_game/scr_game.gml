@@ -1,5 +1,6 @@
 #region Variables
 global.room_destiny = rm_game;
+global.transition = false;
 #endregion
 
 #region Functions
@@ -77,6 +78,11 @@ function glow_fx(_scale_multipli, _colour, _alpha) {
 }
 
 function switch_room() {
+	audio_stop_all();
 	room_goto(global.room_destiny);
+}
+
+function end_transition() {
+	global.transition = false;
 }
 #endregion

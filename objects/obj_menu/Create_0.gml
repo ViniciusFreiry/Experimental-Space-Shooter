@@ -31,11 +31,13 @@ active_menu = function() {
 		case "Play":
 			layer_sequence_create("Transitions", 0, 0, sq_transition_1);
 			global.room_destiny = rm_game;
+			global.transition = true;
 		break;
 		
 		case "Tutorial":
 			layer_sequence_create("Transitions", 0, 0, sq_transition_1);
 			global.room_destiny = rm_tutorial;
+			global.transition = true;
 		break;
 		
 		case "Quit":
