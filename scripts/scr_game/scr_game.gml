@@ -1,4 +1,8 @@
-#region
+#region Variables
+global.room_destiny = rm_game;
+#endregion
+
+#region Functions
 function destroy(_particle = obj_part_shoot) {
 	instance_create_layer(x, y, "Particle", _particle, { image_angle: random(359) });
 	
@@ -70,5 +74,9 @@ function glow_fx(_scale_multipli, _colour, _alpha) {
 	gpu_set_blendmode(bm_add);
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * _scale_multipli, image_yscale * _scale_multipli, image_angle, _colour, _alpha);
 	gpu_set_blendmode(bm_normal);	
+}
+
+function switch_room() {
+	room_goto(global.room_destiny);
 }
 #endregion
