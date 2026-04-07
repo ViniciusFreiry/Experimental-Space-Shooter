@@ -18,14 +18,6 @@ function drop_power_up(_chance_percent = 100) {
 	}
 }
 
-function screen_shake(_shake = 20) {
-	if (instance_exists(obj_screen_shake)) {
-		with(obj_screen_shake) {
-			if (_shake > shake) shake = _shake;
-		}
-	}
-}
-
 function start_stretched_fx() {
 	xscale = 1;
 	yscale = 1;
@@ -68,7 +60,7 @@ function draw_white_fx(_draw_function = draw_self) {
 }
 
 function sound_fx(_audio, _pitch_var = 0, _gain = 0.1) {
-	audio_play_sound(_audio, 0, false, _gain, 0, random_range(1 - _pitch_var, 1 - _pitch_var));
+	audio_play_sound(_audio, 0, false, _gain, 0, random_range(1 - _pitch_var, 1 + _pitch_var));
 }
 
 function glow_fx(_scale_multipli, _colour, _alpha) {

@@ -6,7 +6,7 @@
   "name":"scr_varietes_position",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Effects/Varietes Position/Scripts.yy",
+    "path":"folders/Game Feel/Varietes Position/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

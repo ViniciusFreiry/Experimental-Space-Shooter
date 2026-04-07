@@ -2,7 +2,6 @@
   "$GMObject":"",
   "%Name":"obj_damage_flash",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
@@ -10,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Effects/Damage Flash/Objects.yy",
+    "path":"folders/Game Feel/Damage Flash/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

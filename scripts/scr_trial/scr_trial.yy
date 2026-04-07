@@ -6,7 +6,7 @@
   "name":"scr_trial",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Effects/Trial/Scripts.yy",
+    "path":"folders/Game Feel/Trial/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
