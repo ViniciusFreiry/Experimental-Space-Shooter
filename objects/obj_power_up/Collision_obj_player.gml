@@ -3,6 +3,10 @@ switch(sprite_index) {
 		other.level_up_shoot();
 	break;
 	
+	case spr_power_up2:
+		other.earn_life();
+	break;
+	
 	case spr_power_up3:
 		other.earn_spd();
 	break;
