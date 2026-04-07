@@ -72,14 +72,14 @@ player_controll = function() {
 }
 
 shoot_1 = function() {
-	instance_create_layer(x, y, "Shoot", obj_shoot);
+	varietes_position(7.5, 0, instance_create_layer(x, y, "Shoot", obj_shoot));
 }
 
 shoot_2 = function() {
 	var _shoot_spd = -10;
 	
-	instance_create_layer(x - sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot);
-	instance_create_layer(x + sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot);
+	varietes_position(5, 0, instance_create_layer(x - sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot));
+	varietes_position(5, 0, instance_create_layer(x + sprite_width / 4, y - sprite_height / 4, "Shoot", obj_shoot));
 }
 
 shoot_3 = function() {
@@ -96,6 +96,7 @@ lost_life = function() {
 	
 	set_stretched_fx(2, 0.5);
 	set_white_fx(3);
+	damage_flash(c_red);
 	
 	if (lifes > 0) {
 		lifes--;

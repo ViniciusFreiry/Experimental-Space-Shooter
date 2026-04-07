@@ -7,4 +7,6 @@ else {
 	
 	vspd = lerp(vspd, -10, 0.1);
 	y += vspd;
+	
+	create_trial( , , , , true, glow_colour);
 }
