@@ -14,6 +14,7 @@ my_shield = noone;
 shoot_cd = game_get_speed(gamespeed_fps) / shoots_per_sec;
 invencible_cd = game_get_speed(gamespeed_fps);
 
+initialize_iframes();
 start_white_fx();
 start_stretched_fx();
 #endregion
@@ -67,6 +68,7 @@ player_controll = function() {
 		use_shield();
 	}
 	
+	run_iframes();
 	return_stretched_fx(0.3);
 	return_white_fx();
 }
@@ -101,8 +103,9 @@ lost_life = function() {
 	if (lifes > 0) {
 		lifes--;
 		invencible_timer += invencible_cd;
-		screen_shake(10);
 		
+		set_iframes(invencible_timer);
+		screen_shake(10);
 		hitstop_use(10);
 	} else {
 		screen_shake(50);
