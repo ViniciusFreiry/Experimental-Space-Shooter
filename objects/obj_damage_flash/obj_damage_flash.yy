@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Effects/Damage Flash/Objects.yy",
+    "path":"folders/Game Feel/Damage Flash/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

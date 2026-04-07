@@ -137,6 +137,10 @@ shield_controll = function() {
 	} else my_shield = noone;
 }
 
+earn_life = function(_lifes = 1) {
+	lifes += _lifes;
+}
+
 earn_spd = function(_spd = 1) {
 	spd += _spd;
 }

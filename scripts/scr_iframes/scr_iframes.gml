@@ -3,7 +3,7 @@ function initialize_iframes() {
 	iframes_timer = 0;
 }
 
-function set_iframes(_frames = game_get_speed(gamespeed_fps) * 2) {
+function set_iframes(_frames = 120) {
 	iframes_timer = _frames;
 	iframes = true;
 }

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Effects/Damage Flash/Sprites.yy",
+    "path":"folders/Game Feel/Damage Flash/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
